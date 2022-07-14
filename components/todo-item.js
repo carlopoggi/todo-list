@@ -1,7 +1,7 @@
 function renderElement(id, testo) { 
  return `
   <div>
-    <input type="checkbox">  
+    <input type="checkbox" onclick='toggleTask(${id})'>  
     <p> ${testo} </p> 
     <button
       type='button'

@@ -1,4 +1,4 @@
-function renderList() {
+function renderTodoList() {
   const { todos } = store
   const keys = Object.keys(todos) 
   const lista = document.getElementById('lista-todo')
