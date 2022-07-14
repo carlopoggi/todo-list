@@ -2,7 +2,7 @@
 function renderCompleted(id, testo) { 
   return`
    <div>
-     <input type="checkbox" checked>  
+     <input type="checkbox" onclick='toggleTask(${id})' checked>  
      <p> ${testo} </p> 
      <button
        type='button'

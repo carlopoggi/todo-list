@@ -8,7 +8,7 @@ function addTask() {
   var text = document.getElementById('text-box').value
   var id = Math.random()
   store.todos[id] = text
-  renderList()
+  renderTodoList()
 }
 
 function getTodoTask(id) {
@@ -21,21 +21,24 @@ function getCompletedTask(id) {
 
 function deleteTodo(id) {
   delete store.todos[id]
-  renderList()
+  renderTodoList()
 }
 
 function deleteDone(id) {
   delete store.done[id]
-  renderList()
+  renderDoneList()
 }
 
-function toggleCompletedTask(id) {
+function toggleTask(id) {
   if (store.done[id]) {
     store.todos[id] = store.done[id]
-    deleteTask('todos', id)
+    renderTodoList()
+    deleteDone(id)
     return
+  } else {
+    store.done[id] = store.todos[id]
+    renderDoneList()
+    deleteTodo(id)
   }
-  store.done[id] = store.todos[id]
-  deleteTask('done', id)
 }
 
