@@ -1,9 +1,8 @@
-function renderList () {
+function renderList() {
   const { todos } = store
   const keys = Object.keys(todos) 
-  const lista = document.getElementById('lista')
+  const lista = document.getElementById('lista-todo')
   lista.innerHTML = ''
-  // TODO render todo list
 
   const todoList = keys.map((id) => {
     const testo = store.todos[id]
