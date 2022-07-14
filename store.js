@@ -6,8 +6,12 @@ const store = {
 
 function addTask() {
   var text = document.getElementById('text-box')
+  const { value } = text
+  if (!value) {
+    return
+  }
   var id = Math.random()
-  store.todos[id] = text.value
+  store.todos[id] = value
   text.value = ''
   renderTodoList()
 }
