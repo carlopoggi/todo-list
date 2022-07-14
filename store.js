@@ -5,9 +5,10 @@ const store = {
 
 
 function addTask() {
-  var text = document.getElementById('text-box').value
+  var text = document.getElementById('text-box')
   var id = Math.random()
-  store.todos[id] = text
+  store.todos[id] = text.value
+  text.value = ''
   renderTodoList()
 }
 
