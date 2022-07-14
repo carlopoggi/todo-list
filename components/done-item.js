@@ -1,4 +1,3 @@
-
 function renderCompleted(id, testo) { 
   return`
    <div class='flex'>
@@ -7,7 +6,7 @@ function renderCompleted(id, testo) {
      <button
        type='button'
        class='delete'
-       onclick='deleteTodo(${id})'
+       onclick='deleteDone(${id})'
      >
        x
      </button>
