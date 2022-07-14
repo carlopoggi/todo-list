@@ -1,14 +1,15 @@
 
 function renderCompleted(id, testo) { 
   return`
-   <div>
+   <div class='flex'>
      <input type="checkbox" onclick='toggleTask(${id})' checked>  
      <p> ${testo} </p> 
      <button
        type='button'
+       class='delete'
        onclick='deleteTodo(${id})'
      >
-       cancella
+       x
      </button>
    </div>
  ` 

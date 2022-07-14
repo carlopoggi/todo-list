@@ -6,22 +6,35 @@
   </head>
   
   <body> 
-    <h1>
-      TO DO LIST 
-    </h1>
-    <label for="name">
-      Cosa devi fare oggi?
-    </label>
-    <input
-      type="text"
-      id="text-box"
-      size="20"
-    >
-    <button onclick="addTask()">
-      +
-    </button>
-    <div><ul id="lista-todo"></ul></div>
-    <div><ul id="lista-done"></ul></div>
+    <div class="content">
+      <h1>
+        TO DO LIST 
+      </h1>
+      <div class="flex">
+        <label for="name">
+          Cosa devi fare oggi?
+        </label>
+        <input
+          type="text"
+          id="text-box"
+          size="50"
+        >
+        <button onclick="addTask()">
+          +
+        </button>
+
+      </div>
+      <div class="scatola">
+        <div class="list">
+          COSE DA FARE
+          <ul id="lista-todo"></ul>
+        </div>
+        <div class="list">
+          COSE TUTTE FATTE
+          <ul id="lista-done"></ul>
+        </div>
+      </div>
+    </div>
   </body>
 
 <script src="./store.js"></script>
