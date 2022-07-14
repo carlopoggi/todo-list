@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html>
 
   <head>
@@ -7,12 +7,20 @@
   
   <body> 
     <h1>
-      TITOLONE GIGA
+      TO DO LIST 
     </h1>
-    <label for="name"> Cosa devi fare oggi? </label>
-    <input type="text" id="text-box" size="20" value="">
-    <button onclick="renderElement()">invia</button>
-    <ol id="lista"> </ol>
+    <label for="name">
+      Cosa devi fare oggi?
+    </label>
+    <input
+      type="text"
+      id="text-box"
+      size="20"
+    >
+    <button onclick="addTask()">
+      +
+    </button>
+    <div id="lista"> </div>
     
   </body>
 
