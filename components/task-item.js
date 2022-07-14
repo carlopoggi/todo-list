@@ -1,13 +1,14 @@
-function renderElement() {
- let testo = document.getElementById("text-box").value
-
+function renderElement(id, testo) { 
  return `
   <div>
-    <div>   
-      <input type="checkbox" id="fatto" name="fatto">
-      <label for="fatto">Fatto?</label>
-    </div>  
-    <p> ${testo} </p>
+    <input type="checkbox">  
+    <p> ${testo} </p> 
+    <button
+      type='button'
+      onclick='deleteTodo(${id})'
+    >
+      cancella
+    </button>
   </div>
 ` 
 }
